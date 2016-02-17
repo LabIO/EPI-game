@@ -1,0 +1,11 @@
+#N canvas 1 132 283 170 10;
+#X obj 12 15 r \$1-colision;
+#X obj 12 37 sel 1;
+#X obj 12 69 onebang;
+#X obj 51 47 r \$1-reset;
+#X obj 10 104 outlet;
+#X text 10 132 Send a bang only on the first collision;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;

@@ -1,8 +1,8 @@
-#N canvas 131 299 237 259 10;
+#N canvas 20 311 399 297 10;
 #X obj 87 51 inlet;
-#X obj 87 183 outlet;
-#X obj 87 89 * 20;
-#X obj 87 111 - 10;
+#X obj 90 253 outlet;
+#X floatatom 187 86 5 0 0 0 - - -, f 5;
+#X obj 103 121 autoscaler 4 -4;
 #X connect 0 0 2 0;
-#X connect 2 0 3 0;
+#X connect 0 0 3 0;
 #X connect 3 0 1 0;
