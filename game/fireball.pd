@@ -1,4 +1,4 @@
-#N canvas 850 77 722 633 10;
+#N canvas 643 77 722 633 10;
 #X obj 76 443 glsl_program;
 #X obj 149 366 pack 0 0;
 #X obj 170 346 t b f;
@@ -53,6 +53,7 @@
 #X obj 76 604 square 0.13;
 #X obj 75 32 gemhead -1;
 #X obj 76 495 translateXYZ 0 0 -16;
+#X obj 75 10 inlet;
 #X connect 0 0 50 0;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;
@@ -110,3 +111,4 @@
 #X connect 47 0 40 0;
 #X connect 49 0 32 0;
 #X connect 50 0 12 0;
+#X connect 51 0 49 0;

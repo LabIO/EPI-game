@@ -1,0 +1,12 @@
+#N canvas 1 77 450 300 10;
+#X obj 46 96 line 0 10;
+#X obj 46 73 pack \$1 30;
+#X obj 65 44 r handSmooth;
+#X obj 46 12 inlet;
+#X obj 45 145 outlet;
+#X obj 97 124 r handSmoothGrain;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 0;
+#X connect 5 0 0 2;
