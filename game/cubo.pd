@@ -239,6 +239,12 @@
 #X obj 99 345 s perdePonto;
 #X obj 72 370 * -11;
 #X obj 72 392 + 5.5;
+#X obj 36 -54 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 108 -119 r reset;
+#X obj 36 -110 r gameOver;
+#X msg 36 -87 0;
+#X msg 107 -96 1;
 #X connect 0 0 87 0;
 #X connect 1 0 4 1;
 #X connect 2 0 23 0;
@@ -334,3 +340,8 @@
 #X connect 90 1 14 0;
 #X connect 93 0 94 0;
 #X connect 94 0 21 0;
+#X connect 95 0 82 0;
+#X connect 96 0 99 0;
+#X connect 97 0 98 0;
+#X connect 98 0 95 0;
+#X connect 99 0 95 0;
