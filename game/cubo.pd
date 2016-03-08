@@ -15,7 +15,7 @@
 #X obj 72 288 t f f;
 #X obj 126 352 s \$1-Fim;
 #X obj 438 0 r \$1-Fim;
-#N canvas 93 87 504 506 randrota 0;
+#N canvas 89 85 504 506 randrota 0;
 #X obj 51 56 r \$1-Fim;
 #X obj 51 136 random 360;
 #X obj 83 161 random 360;
@@ -100,12 +100,12 @@
 #X obj 730 18 r \$1-reset;
 #X obj 363 0 r \$1-reset;
 #X obj 257 -95 r \$1-reset;
-#X obj 477 -91 s \$1-reset;
-#X obj 477 -114 r reset;
+#X obj 472 -41 s \$1-reset;
+#X obj 477 -144 r reset;
 #X obj 500 492 s \$1-reset;
 #X obj 418 33 random 4000;
 #X obj 418 55 / 4000;
-#X obj 554 -87 s somaPontos;
+#X obj 606 -87 s somaPontos;
 #X obj 337 601 text2d 0;
 #X text 716 -2 Random speed * game speed;
 #X obj 337 410 colourRGB 0 0.7 0 1;
@@ -216,7 +216,7 @@
 #X obj 337 302 translateXYZ 0 0 0;
 #X obj 357 522 oneCollision \$1;
 #X obj 516 349 oneCollision \$1;
-#X obj 554 -112 oneCollision \$1;
+#X obj 606 -112 oneCollision \$1;
 #X obj 428 240 t b f;
 #X obj 298 217 t a b b;
 #X obj 494 175 oneCollision \$1;
@@ -297,6 +297,9 @@
 #X obj 615 9 r \$1-reset;
 #X obj 634 586 decide, f 11;
 #X obj 665 645 + 1;
+#X obj 477 -118 t b b;
+#X obj 472 -65 delay 100;
+#X obj 497 -91 random 1000;
 #X connect 0 0 101 0;
 #X connect 1 0 4 1;
 #X connect 2 0 20 0;
@@ -356,7 +359,7 @@
 #X connect 52 0 45 0;
 #X connect 53 0 58 0;
 #X connect 54 0 33 0;
-#X connect 56 0 55 0;
+#X connect 56 0 116 0;
 #X connect 58 0 59 0;
 #X connect 59 0 43 0;
 #X connect 63 0 61 0;
@@ -411,3 +414,7 @@
 #X connect 113 0 110 0;
 #X connect 114 0 115 0;
 #X connect 115 0 109 0;
+#X connect 116 0 117 0;
+#X connect 116 1 118 0;
+#X connect 117 0 55 0;
+#X connect 118 0 117 1;
