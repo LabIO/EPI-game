@@ -415,7 +415,7 @@ allows to narrow it.;
 #X obj 136 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 136 102 s reset;
-#N canvas 1 520 412 190 CUBOS 0;
+#N canvas 1 519 412 190 CUBOS 0;
 #X obj 11 12 cubo 1;
 #X text 21 146 GENERATE FALLING CUBES;
 #X obj 11 36 cubo 2;
@@ -491,7 +491,7 @@ allows to narrow it.;
 #X obj 87 419 > 0;
 #X obj 70 475 s top;
 #X obj 102 394 r top;
-#X obj 128 447 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 128 447 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 736 255 r top;
 #X obj 121 283 sel 1;
@@ -668,7 +668,7 @@ allows to narrow it.;
 #X restore 12 109 pd FUNDO;
 #X obj 144 13 r pontos;
 #X obj 144 38 nbx 3 25 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--262144 -1 -1 0 256;
+-262144 -1 -1 4 256;
 #X msg 330 20 reset \, view 0 0 20 \, perspec -1 1 -1 1 4 50 \, dimen
 1024 768 \, lighting 1 \, FSAA 8 \, frame 30 \, create \, 1;
 #N canvas 81 242 460 232 MAOS 0;
@@ -843,7 +843,7 @@ allows to narrow it.;
 #X obj 34 191 alpha;
 #X floatatom 175 410 5 0 0 0 - - -, f 5;
 #X obj 34 86 gemhead 10;
-#X obj 34 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 34 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 175 285 loadbang;
 #X msg 202 329 font game/orbitron-light.otf;
@@ -915,7 +915,7 @@ allows to narrow it.;
 -1 -1;
 #X floatatom 145 150 5 0 0 0 - - -, f 5;
 #X obj 140 178 s setBody;
-#N canvas 1 95 716 565 CUBO-FOTO 0;
+#N canvas 1 94 716 565 CUBO-FOTO 0;
 #X floatatom 354 294 5 0 0 0 - - -, f 5;
 #X floatatom 158 484 5 0 0 0 - - -, f 5;
 #X obj 72 195 f;
@@ -1242,7 +1242,7 @@ allows to narrow it.;
 #X connect 87 0 88 0;
 #X connect 88 0 86 1;
 #X restore 10 207 pd CUBO-FOTO;
-#N canvas 4 80 614 646 MAUS 0;
+#N canvas 2 79 614 646 MAUS 0;
 #X floatatom 44 582 5 0 0 0 - - -, f 5;
 #X obj -1 601 cube 0.5;
 #X floatatom 110 -49 5 0 0 0 - - -, f 5;
@@ -1483,7 +1483,7 @@ allows to narrow it.;
 #X obj 76 43 t b b b;
 #X obj 95 118 delay 100;
 #X obj -1 -207 r mausSwitch;
-#X obj -1 -185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -1 -185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 115 67 s maus-reset;
 #X obj 95 140 t b b;
@@ -1497,7 +1497,7 @@ allows to narrow it.;
 #X msg 95 193 \; mausSwitch 0 \; mausPontos bang \;;
 #X msg 112 165 0;
 #X msg 59 171 1;
-#X msg 11 480 open game/skull_2.tif;
+#X msg 11 480 open game/skull_2.jpg;
 #X connect 0 0 1 1;
 #X connect 2 0 31 4;
 #X connect 3 0 2 0;

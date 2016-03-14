@@ -73,7 +73,7 @@
 #X obj 372 688 r pontos;
 #X obj 357 711 f;
 #X obj 189 -128 r \$1-colision;
-#X obj 166 -35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 166 -35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 88 -4 demux 0 1 2 3;
 #X obj 193 -78 onebang;
@@ -296,7 +296,7 @@
 #X msg 382 816 39;
 #X obj 428 313 + 0.03;
 #X obj 421 513 - 0.02;
-#X msg 129 615 open epi.tif;
+#X msg 129 615 open epi.jpg;
 #X connect 0 0 102 0;
 #X connect 1 0 4 1;
 #X connect 2 0 20 0;
