@@ -1,4 +1,4 @@
-//patko2013 from https://www.shadertoy.com/view/4ssGzn --X
+//patko2013 from https://www.shadertoy.com/view/4ssGzn --Xfix
 
 
 uniform float iGlobalTime;
