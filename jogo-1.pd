@@ -491,7 +491,7 @@ allows to narrow it.;
 #X obj 87 419 > 0;
 #X obj 70 475 s top;
 #X obj 102 394 r top;
-#X obj 128 447 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 128 447 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 736 255 r top;
 #X obj 121 283 sel 1;
@@ -602,46 +602,60 @@ allows to narrow it.;
 #X connect 74 0 71 0;
 #X connect 77 0 67 0;
 #X restore 9 136 pd PONTOS;
-#N canvas 303 197 609 468 FUNDO 0;
+#N canvas 74 172 609 468 FUNDO 0;
 #X floatatom 75 43 5 0 0 0 - - -, f 5;
 #X floatatom 119 47 5 0 0 0 - - -, f 5;
 #X floatatom 179 51 5 0 0 0 - - -, f 5;
-#X obj 312 305 pix_image;
-#X obj 40 396 pix_texture;
-#X floatatom 98 420 5 0 0 0 - - -, f 5;
-#X floatatom 157 422 5 0 0 0 - - -, f 5;
+#X obj 466 266 pix_image;
+#X obj 43 446 pix_texture;
+#X floatatom 101 470 5 0 0 0 - - -, f 5;
+#X floatatom 160 472 5 0 0 0 - - -, f 5;
 #X obj 40 80 translateXYZ 0 1.84 -10;
-#X obj 40 441 rectangle 11.07 9.33;
+#X obj 43 491 rectangle 11.07 9.33;
 #X obj 40 14 gemhead 1;
 #X obj 7 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X msg 326 144 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-01.png
+#X msg 480 105 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-01.png
 ;
-#X msg 335 174 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-02.png
+#X msg 489 135 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-02.png
 ;
-#X msg 352 200 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-03.png
+#X msg 506 161 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-03.png
 ;
-#X msg 362 230 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-04.png
+#X msg 516 191 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-04.png
 ;
-#X msg 373 260 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-05.png
+#X msg 527 221 open /home/x/Documents/pd/EPI-game/game/fundos/fundo-05.png
 ;
-#X obj 345 47 r reset;
-#X obj 345 69 random 5;
-#X obj 345 91 sel 0 1 2 3 4;
+#X obj 499 8 r reset;
+#X obj 499 30 random 5;
+#X obj 499 52 sel 0 1 2 3 4;
 #X obj 43 328 pix_film;
 #X obj 77 220 f;
 #X obj 77 242 + 1;
-#X obj 77 264 mod 2243;
 #X obj 64 132 t a b;
 #X obj 186 153 loadbang;
-#X msg 131 188 open game/fundos/fundov-1.mov;
+#X msg 131 188 open game/fundos/vid-3.avi;
+#X floatatom 139 399 5 0 0 3 length - -, f 5;
+#X floatatom 187 399 5 0 0 3 width - -, f 5;
+#X floatatom 238 399 5 0 0 3 height - -, f 5;
+#X obj 146 362 unpack 0 0 0 0;
+#X floatatom 254 363 5 0 0 3 fps - -, f 5;
+#X obj 124 431 s vidLength;
+#X obj 129 246 r vidLength;
+#X obj 129 268 - 1;
+#X obj 77 264 mod 5;
+#X floatatom 254 220 5 0 0 0 - - -, f 5;
+#X msg 243 283 open \$1;
+#X obj 229 255 makefilename game/fundos/vid-%d.avi;
+#X obj 370 96 r reset;
+#X obj 370 140 + 1;
+#X obj 370 118 random 4;
 #X connect 0 0 7 1;
 #X connect 1 0 7 2;
 #X connect 2 0 7 3;
 #X connect 4 0 8 0;
 #X connect 5 0 8 1;
 #X connect 6 0 8 2;
-#X connect 7 0 23 0;
+#X connect 7 0 22 0;
 #X connect 9 0 7 0;
 #X connect 10 0 9 0;
 #X connect 11 0 3 0;
@@ -657,18 +671,31 @@ allows to narrow it.;
 #X connect 18 3 14 0;
 #X connect 18 4 15 0;
 #X connect 19 0 4 0;
+#X connect 19 1 28 0;
 #X connect 20 0 21 0;
-#X connect 21 0 22 0;
-#X connect 22 0 20 1;
-#X connect 22 0 19 1;
-#X connect 23 0 19 0;
-#X connect 23 1 20 0;
-#X connect 24 0 25 0;
-#X connect 25 0 19 0;
+#X connect 21 0 33 0;
+#X connect 22 0 19 0;
+#X connect 22 1 20 0;
+#X connect 23 0 24 0;
+#X connect 25 0 30 0;
+#X connect 28 0 25 0;
+#X connect 28 1 26 0;
+#X connect 28 2 27 0;
+#X connect 28 3 29 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 1;
+#X connect 33 0 20 1;
+#X connect 33 0 19 1;
+#X connect 34 0 36 0;
+#X connect 35 0 19 0;
+#X connect 36 0 35 0;
+#X connect 37 0 39 0;
+#X connect 38 0 36 0;
+#X connect 39 0 38 0;
 #X restore 12 109 pd FUNDO;
 #X obj 144 13 r pontos;
 #X obj 144 38 nbx 3 25 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--262144 -1 -1 4 256;
+-262144 -1 -1 0 256;
 #X msg 330 20 reset \, view 0 0 20 \, perspec -1 1 -1 1 4 50 \, dimen
 1024 768 \, lighting 1 \, FSAA 8 \, frame 30 \, create \, 1;
 #N canvas 81 242 460 232 MAOS 0;
@@ -1052,7 +1079,7 @@ allows to narrow it.;
 #X obj 131 -238 r Foto-colision;
 #X obj 170 -198 r Foto-reset;
 #X obj 597 79 s Foto-reset;
-#X obj 53 -21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 53 -21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 99 337 s Foto-Fim;
 #X obj 92 78 s Foto-newFrame;
